@@ -3,71 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declarações - AF</title>
-    <style>
-        /* Copiar os mesmos estilos da página anterior */
-        /* ... (veja o código acima) ... */
-    </style>
+    <title>Declarações</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Chuva de corações -->
-    <div class="heart-rain"></div>
-
-    <!-- Barra de navegação -->
-    <header class="navbar">
+    <nav>
         <div class="logo">AF</div>
-        <button class="menu-button">&#9776;</button>
-    </header>
-
-    <!-- Menu pop-up -->
-    <div class="menu-popup">
-        <div class="menu-content">
-            <button class="close-btn">&times;</button>
-            <ul>
-                <li><a href="fotos.html">Fotos</a></li>
-                <li><a href="declaracoes.html">Declaração</a></li>
-            </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="index.html">Início</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="declaracoes.html">Declaração</a>
+            <span class="close-btn" onclick="closeMenu()">×</span>
         </div>
-    </div>
+    </nav>
 
-    <!-- Conteúdo da página Declaração -->
     <div class="content">
-        <h1>Como te amo Muito 🩷</h1>
-        <p>Querido Anderson, desde o momento que te conheci, minha vida se transformou em algo muito mais belo. Eu te amo profundamente e cada segundo ao seu lado é precioso. 💖</p>
+        <h1>Como te amo muito 🩷</h1>
+        <p>Eu te amo mais do que palavras podem expressar. Você é tudo para mim, Anderson. ❤️</p>
     </div>
 
-    <script>
-        // Gerar a chuva de corações
-        const heartRain = document.querySelector('.heart-rain');
-
-        function generateHearts() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.textContent = '❤️';
-            const startPositionX = Math.random() * window.innerWidth;
-            heart.style.left = `${startPositionX}px`;
-
-            heartRain.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 10000);
-        }
-
-        setInterval(generateHearts, 500);
-
-        // Funcionalidade do menu pop-up
-        const menuButton = document.querySelector('.menu-button');
-        const menuPopup = document.querySelector('.menu-popup');
-        const closeButton = document.querySelector('.close-btn');
-
-        menuButton.addEventListener('click', () => {
-            menuPopup.style.display = 'flex';
-        });
-
-        closeButton.addEventListener('click', () => {
-            menuPopup.style.display = 'none';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
