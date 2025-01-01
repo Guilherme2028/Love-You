@@ -3,77 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotos - AF</title>
-    <style>
-        /* Copiar os mesmos estilos da página anterior */
-        /* ... (veja o código acima) ... */
-    </style>
+    <title>Fotos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Chuva de corações -->
-    <div class="heart-rain"></div>
-
-    <!-- Barra de navegação -->
-    <header class="navbar">
+    <nav>
         <div class="logo">AF</div>
-        <button class="menu-button">&#9776;</button>
-    </header>
-
-    <!-- Menu pop-up -->
-    <div class="menu-popup">
-        <div class="menu-content">
-            <button class="close-btn">&times;</button>
-            <ul>
-                <li><a href="fotos.html">Fotos</a></li>
-                <li><a href="declaracoes.html">Declaração</a></li>
-            </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="index.html">Início</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="declaracoes.html">Declaração</a>
+            <span class="close-btn" onclick="closeMenu()">×</span>
         </div>
-    </div>
+    </nav>
 
-    <!-- Conteúdo da página Fotos -->
     <div class="content">
-        <h1>Portfólio de Fotos</h1>
-        <p>Aqui estão algumas das minhas fotos favoritas!</p>
-
-        <div class="portfolio">
-            <div class="portfolio-grid">
-                <img src="imagens/imagem1.jpeg.jpg" alt="Imagem 1">
-                <img src="imagens/imagem2.jpeg.jpg" alt="Imagem 2">
-                <img src="imagens/imagem3.jpeg.jpg" alt="Imagem 3">
-                <img src="imagens/imagem4.jpeg.jpg" alt="Imagem 4">
-                <img src="imagens/imagem5.jpeg.jpg" alt="Imagem 5">
-                <img src="imagens/imagem6.jpeg.jpg" alt="Imagem 6">
-            </div>
+        <h1>Galeria de Fotos</h1>
+        <div class="gallery">
+            <img src="imagens/imagem1.jpg" alt="Foto 1">
+            <img src="imagens/imagem2.jpg" alt="Foto 2">
+            <img src="imagens/imagem3.jpg" alt="Foto 3">
+            <img src="imagens/imagem4.jpg" alt="Foto 4">
         </div>
     </div>
 
-    <script>
-        // Gerar a chuva de corações
-        const heartRain = document.querySelector('.heart-rain');
-
-        function generateHearts() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.textContent = '❤️';
-            const startPositionX = Math.random() * window.innerWidth;
-            heart.style.left = `${startPositionX}px`;
-
-            heartRain.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 10000);
-        }
-
-        setInterval(generateHearts, 500);
-
-        // Funcionalidade do menu pop-up
-        const menuButton = document.querySelector('.menu-button');
-        const menuPopup = document.querySelector('.menu-popup');
-        const closeButton = document.querySelector('.close-btn');
-
-        menuButton.addEventListener('click', () => {
-            menuPopup.style.display = 'flex';
-        });
-
-        closeButton.addEvent
+    <script src="script.js"></script>
+</body>
+</html>
