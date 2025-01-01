@@ -1,0 +1,97 @@
+/* Estilos principais */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+nav .close-btn {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Chuva de corações */
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Galeria de fotos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o conteúdo */
+.content {
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para o título */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
