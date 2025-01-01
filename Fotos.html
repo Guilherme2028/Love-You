@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos - AF</title>
+    <style>
+        /* Copiar os mesmos estilos da página anterior */
+        /* ... (veja o código acima) ... */
+    </style>
+</head>
+<body>
+    <!-- Chuva de corações -->
+    <div class="heart-rain"></div>
+
+    <!-- Barra de navegação -->
+    <header class="navbar">
+        <div class="logo">AF</div>
+        <button class="menu-button">&#9776;</button>
+    </header>
+
+    <!-- Menu pop-up -->
+    <div class="menu-popup">
+        <div class="menu-content">
+            <button class="close-btn">&times;</button>
+            <ul>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="declaracoes.html">Declaração</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Conteúdo da página Fotos -->
+    <div class="content">
+        <h1>Portfólio de Fotos</h1>
+        <p>Aqui estão algumas das minhas fotos favoritas!</p>
+
+        <div class="portfolio">
+            <div class="portfolio-grid">
+                <img src="imagens/imagem1.jpeg" alt="Imagem 1">
+                <img src="imagens/imagem2.jpeg" alt="Imagem 2">
+                <img src="imagens/imagem3.jpeg" alt="Imagem 3">
+                <img src="imagens/imagem4.jpeg" alt="Imagem 4">
+                <img src="imagens/imagem5.jpeg" alt="Imagem 5">
+                <img src="imagens/imagem6.jpeg" alt="Imagem 6">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gerar a chuva de corações
+        const heartRain = document.querySelector('.heart-rain');
+
+        function generateHearts() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.textContent = '❤️';
+            const startPositionX = Math.random() * window.innerWidth;
+            heart.style.left = `${startPositionX}px`;
+
+            heartRain.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(generateHearts, 500);
+
+        // Funcionalidade do menu pop-up
+        const menuButton = document.querySelector('.menu-button');
+        const menuPopup = document.querySelector('.menu-popup');
+        const closeButton = document.querySelector('.close-btn');
+
+        menuButton.addEventListener('click', () => {
+            menuPopup.style.display = 'flex';
+        });
+
+        closeButton.addEvent
